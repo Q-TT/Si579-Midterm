@@ -18,9 +18,9 @@ function getRhymes(rel_rhy, callback) {
 showRhymesButton.addEventListener('click', () => {
     rhymesOutput.innerHTML = '';
     text = wordInput.value;
-    getRhymes(text, (output) => {
-        for(let key in output) {
-            let rhyme = output[key];
+    getRhymes(text, (result) => {
+        for(let key in result) {
+            let rhyme = result[key];
             let rhymesOutputList = document.createElement('li');
             rhymesOutputList.classList.add("list-group-item");
             rhymesOutputList.innerHTML = rhyme.text;
